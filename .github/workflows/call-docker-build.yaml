@@ -39,6 +39,7 @@
         dockerhub-enable: false
         ghcr-enable: true
         push: true
+        platforms: linux/amd64,linux/arm64
         image-names: |
           ghcr.io/${{ github.repository }}
   
@@ -57,6 +58,7 @@
         dockerhub-enable: true
         ghcr-enable: true
         push: true
+        platforms: linux/amd64,linux/arm64
         image-names: |
           docker.io/${{ github.repository }}
           ghcr.io/${{ github.repository }}
