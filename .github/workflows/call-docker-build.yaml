@@ -15,7 +15,10 @@
       paths-ignore:
         - 'README.md'
         - '.github/linters/**'
-  
+    schedule:
+        # re-run monthly to keep image fresh with upstream base images
+        - cron: '0 12 15 * *'
+
   # cancel any previously-started, yet still active runs of this workflow on the same branch
   concurrency:
     group: ${{ github.ref }}-${{ github.workflow }}
